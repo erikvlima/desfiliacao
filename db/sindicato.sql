@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `sindicato` (
-  `sind_id` int(11) NOT NULL,
+  `sind_id` int(10) NOT NULL,
   `sind_nome` text NOT NULL,
   `sind_email` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
