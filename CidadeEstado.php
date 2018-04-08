@@ -12,4 +12,11 @@ class CidadeEstado
         $sql = 'SELECT * FROM cidades WHERE estados_cod_estados = ?';
         return $db->GetObjectList($sql, array($uf));
     }
+
+    function getEstados()
+    {
+        global $db;
+        $sql = 'SELECT * FROM estados';
+        return $db->GetObjectList($sql, array());
+    }
 }
