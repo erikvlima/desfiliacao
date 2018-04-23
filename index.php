@@ -65,7 +65,7 @@ $sind = $conexao2->getSindicatos();
 
     <div class="form-group">UF</div>
     <div class="form-group">
-        <select name="uf" id="uf" required="required" style="width:400px;">
+        <select name="uf" id="uf" required="required" class="form-control" style="width:400px;">
             <option value="0">Escolha seu estado...</option>
             <?php foreach ($ufs as $uf) {?>
                 <option value="<?php echo $uf->cod_estados?>" id="estados"><?php echo $uf->nome ?></option>
@@ -74,7 +74,7 @@ $sind = $conexao2->getSindicatos();
     </div>
     <div class="form-group">Cidade</div>
     <div class="form-group">
-        <select name="cidades" id="cidades" required="required" class="form-control" disabled="disabled" style="width:400px;">
+        <select name="cidades" id="cidades" required="required" class="form-control" style="width:400px;">
             <option value="0">Primeiro escolha um estado...</option>
         </select>
     </div>
@@ -93,7 +93,7 @@ $sind = $conexao2->getSindicatos();
         });
     });
 
-    $('#uf').selectize();
+    //$('#uf').selectize();
 
     $('#segmento').selectize({
         delimiter: ',',
@@ -129,9 +129,9 @@ $sind = $conexao2->getSindicatos();
                             options += "<option id='cities' value='" + cidade.nome + "'> " + cidade.nome + "</option>";
                         }
                         $('#cidades').html(options).show();
-                        $('#cidades').prop('disabled', false);
-                        $('#cidades').prop('class', false);
-                        $('#cidades').selectize();
+                       // $('#cidades').prop('disabled', false);
+                        //$('#cidades').prop('class', false);
+                        //$('#cidades').selectize();
                     } else {
                         alert(data);
                     }
